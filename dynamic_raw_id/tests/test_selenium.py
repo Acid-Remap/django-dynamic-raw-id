@@ -89,7 +89,7 @@ class BaseSeleniumTests(StaticLiveServerTestCase):
         self.wd.switch_to.window(self.wd.window_handles[1])
 
         # Click on the username/line item with the link text <link_text>.
-        self.wd.find_elemen(By.LINK_TEXT, link_text).click()
+        self.wd.find_element(By.LINK_TEXT, link_text).click()
 
         # Activate default window
         self.wd.switch_to.window(self.wd.window_handles[0])
