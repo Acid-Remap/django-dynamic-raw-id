@@ -238,7 +238,7 @@ class BaseSeleniumTests(StaticLiveServerTestCase):
 
         # object label is now be displayed next to the form field
         self.assertEqual(
-            self.wd.find_element((By.ID, "{0}_dynamic_raw_id_label".format(row_id)).text,
+            self.wd.find_element(By.ID, "{0}_dynamic_raw_id_label".format(row_id)).text,
             str(custom_obj.num),
         )
 
