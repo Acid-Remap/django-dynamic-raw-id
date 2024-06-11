@@ -277,6 +277,6 @@ class BaseSeleniumTests(StaticLiveServerTestCase):
 
         # Only "trick" is visible in the changelist table
         self.wd.implicitly_wait(0)
-        self.assertTrue(self.wd.find_element_by_link_text("trick").is_displayed())
-        self.assertTrue(len(self.wd.find_elements_by_link_text("tick")) == 0)
-        self.assertTrue(len(self.wd.find_elements_by_link_text("track")) == 0)
+        self.assertTrue(self.wd.find_element(By.LINK_TEXT, "trick").is_displayed())
+        self.assertTrue(len(self.wd.find_elements(By.LINK_TEXT, "tick")) == 0)
+        self.assertTrue(len(self.wd.find_elements(By.LINK_TEXT, "track")) == 0)
